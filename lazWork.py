@@ -1,19 +1,19 @@
 import random
-rows, cols = (5, 5)
-arr = [[0]*cols]*rows
+arr = [[0,0,0,0,0], [0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
 gemCount = 0
-gemMax = 1
+gemMax = 4
+myList = [1, 2, 3, 4, 0]
 
 print(arr)
-def gemRandomization(array):
+def gemRandomization(array, gCount, gMax):
 
-    for i in range (5):
-        for j in range(5):
-            isGemquestion = 1
-            if (isGemquestion == 1 & gemCount <= gemMax):
-                 arr[i][j] =  isGemquestion
+    while gCount < gMax:
+        gCount = gCount + 1
+        x = random.choice(myList)
+        y = random.choice(myList)
+        array[x][y] = 1
+                    
 
-gemRandomization(arr)
-for i in range (5):
-        for j in range(5):
-            print(arr[i][j], end = " ")
+gemRandomization(arr,gemCount, gemMax)
+
+print(arr)
