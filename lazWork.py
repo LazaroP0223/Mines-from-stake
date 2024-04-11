@@ -1,10 +1,14 @@
 import random
+
+#0's represent bombs, 1's gems
 arr = [[0,0,0,0,0], [0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+#current gems in the variable
 gemCount = 0
-gemMax = 24
+# number of gems the user wants in the board
+gemMax = 10
 myList = [1, 2, 3, 4, 0]
 
-print(arr)
+
 def gemRandomization(array, gCount, gMax):
 
     while gCount < gMax:
